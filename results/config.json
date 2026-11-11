@@ -1,0 +1,66 @@
+{
+  "project": "Project Budget Allocation (0/1 Knapsack)",
+  "generated_at": "2026-11-04T12:51:26",
+  "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.5.4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "master_seed": 2026,
+  "seed_formula": "master_seed + 1000*size_index + 100*algorithm_index + run_index",
+  "sizes": {
+    "small": 20,
+    "medium": 60,
+    "large": 150
+  },
+  "instance_seeds": {
+    "small": 1001,
+    "medium": 1002,
+    "large": 1003
+  },
+  "budget_fraction": 0.5,
+  "cost_range": [
+    100,
+    1000
+  ],
+  "value_range": [
+    100,
+    1000
+  ],
+  "runs": 30,
+  "max_evaluations": 25000,
+  "algorithms": {
+    "GA": {
+      "population_size": 50,
+      "tournament_size": 3,
+      "crossover_prob": 0.9,
+      "mutation_prob": null,
+      "elitism": 2,
+      "max_evaluations": 25000
+    },
+    "BPSO": {
+      "swarm_size": 50,
+      "inertia_start": 0.9,
+      "inertia_end": 0.4,
+      "c1": 1.5,
+      "c2": 1.5,
+      "vmax": 6.0,
+      "max_evaluations": 25000
+    },
+    "ACO": {
+      "colony_size": 50,
+      "alpha": 1.0,
+      "beta": 2.0,
+      "rho": 0.1,
+      "tau0": 0.5,
+      "tau_min": 0.01,
+      "tau_max": 1.0,
+      "iteration_weight": 0.3,
+      "global_weight": 0.7,
+      "max_evaluations": 25000
+    }
+  },
+  "instance_files": {
+    "small": "data\\instances\\small.json",
+    "medium": "data\\instances\\medium.json",
+    "large": "data\\instances\\large.json"
+  }
+}
